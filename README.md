@@ -1,6 +1,6 @@
-# Learning management system - Shared library
+# Flex Payment Gateway - Shared library
 
-Shared library for Spring Boot microservices in Learning management system
+Shared library for Spring Boot microservices in Flex Payment Gateway
 
 [![](https://jitpack.io/v/bojanzdelar/learning-management-system-shared-library.svg)](https://jitpack.io/#bojanzdelar/learning-management-system-shared-library)
 
@@ -20,8 +20,8 @@ and the dependency:
 
 ```xml
 <dependency>
-    <groupId>com.github.bojanzdelar</groupId>
-    <artifactId>learning-management-system-shared-library</artifactId>
+    <groupId>com.github.DamaluMalisa</groupId>
+    <artifactId>flex-payment-gateway-shared-library</artifactId>
     <version>Tag</version>
 </dependency>
 ```
