@@ -43,11 +43,11 @@ public class SecurityUtils {
         return getClaims().get(ADMIN_ID_CLAIM, Long.class);
     }
 
-    public static Long getTeacherId() {
+    public static Long getMerchantId() {
         return getClaims().get(MERCHANT_ID_CLAIM, Long.class);
     }
 
-    public static Long getStudentId() {
+    public static Long getPayerId() {
         return getClaims().get(PAYER_ID_CLAIM, Long.class);
     }
 
