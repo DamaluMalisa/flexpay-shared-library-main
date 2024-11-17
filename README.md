@@ -2,7 +2,6 @@
 
 Shared library for Spring Boot microservices in Flex Payment Gateway
 
-[![](https://jitpack.io/v/bojanzdelar/learning-management-system-shared-library.svg)](https://jitpack.io/#bojanzdelar/learning-management-system-shared-library)
 
 ## Using with Maven
 
