@@ -3,6 +3,7 @@ package com.flex.payment.shared.controller;
 import com.flex.payment.shared.dto.BaseDTO;
 import com.flex.payment.shared.model.BaseEntity;
 import com.flex.payment.shared.service.BaseService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springdoc.api.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
@@ -11,7 +12,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.util.List;
 import java.util.Set;
 

@@ -33,5 +33,4 @@ com/flex/payment/shared/config/JpaAuditingConfig.class
 com/flex/payment/shared/dto/UserDetailsDTO$1.class
 com/flex/payment/shared/dto/RoleDTO$RoleDTOBuilder.class
 com/flex/payment/shared/controller/ApiError.class
-com/flex/payment/shared/util/UseExistingIdOtherwiseGenerateUsingIdentity.class
 com/flex/payment/shared/controller/BaseController.class

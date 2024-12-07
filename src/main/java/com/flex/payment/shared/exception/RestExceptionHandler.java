@@ -3,11 +3,14 @@ package com.flex.payment.shared.exception;
 import com.flex.payment.shared.controller.ApiError;
 import feign.FeignException;
 import io.jsonwebtoken.JwtException;
+import io.micrometer.common.lang.NonNull;
+import io.micrometer.common.lang.Nullable;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -21,6 +24,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.Iterator;
 import java.util.Locale;
+import java.util.Objects;
 
 @Order(Ordered.HIGHEST_PRECEDENCE)
 @RestControllerAdvice
@@ -32,20 +36,21 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @Override
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     protected ResponseEntity<Object> handleMethodArgumentNotValid(
-            MethodArgumentNotValidException ex,
-            HttpHeaders headers,
-            HttpStatus status,
-            WebRequest request) {
+            @NonNull MethodArgumentNotValidException ex,
+            @Nullable HttpHeaders headers,
+            @NonNull HttpStatusCode status,
+            @NonNull WebRequest request) {
         StringBuilder message = new StringBuilder();
         Iterator<ObjectError> iterator = ex.getBindingResult().getAllErrors().iterator();
         while (iterator.hasNext()) {
-            message.append(iterator.next().getDefaultMessage().toLowerCase(Locale.ROOT));
+            message.append(Objects.requireNonNull(iterator.next().getDefaultMessage()).toLowerCase(Locale.ROOT));
             if (iterator.hasNext()) {
                 message.append("; ");
             }
         }
         return buildResponseEntity(HttpStatus.BAD_REQUEST, message.toString());
     }
+
 
     @ExceptionHandler({BadRequestException.class, JwtException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)

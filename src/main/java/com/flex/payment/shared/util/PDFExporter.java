@@ -6,8 +6,8 @@ import com.lowagie.text.*;
 import com.lowagie.text.pdf.PdfPCell;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfWriter;
+import jakarta.servlet.http.HttpServletResponse;
 
-import javax.servlet.http.HttpServletResponse;
 import java.awt.*;
 import java.io.IOException;
 import java.util.List;
@@ -79,7 +79,8 @@ public abstract class PDFExporter<DTO extends BaseDTO<ID>, ID> {
     }
 
     @FunctionalInterface
-    protected interface CellContentGetter<DTO> {
+    public interface CellContentGetter<DTO> {
         String getCellContent(DTO DTO);
     }
+
 }

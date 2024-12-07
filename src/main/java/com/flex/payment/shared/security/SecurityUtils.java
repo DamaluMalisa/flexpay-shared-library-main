@@ -14,15 +14,12 @@ public class SecurityUtils {
     public static Long ROLE_MERCHANT_ID = 3L;
     public static String ROLE_MERCHANT = "ROLE_MERCHANT";
 
-    public static Long ROLE_PAYER_ID = 4L;
-    public static String ROLE_PAYER = "ROLE_PAYER";
 
     public static Long ROOT_USER_ID = 1337L;
 
     public static String USER_ID_CLAIM = "userId";
     public static String ADMIN_ID_CLAIM = "adminId";
     public static String MERCHANT_ID_CLAIM = "merchantId";
-    public static String PAYER_ID_CLAIM = "payerId";
 
     public static String BEARER_PREFIX = "Bearer ";
 
@@ -45,10 +42,6 @@ public class SecurityUtils {
 
     public static Long getMerchantId() {
         return getClaims().get(MERCHANT_ID_CLAIM, Long.class);
-    }
-
-    public static Long getPayerId() {
-        return getClaims().get(PAYER_ID_CLAIM, Long.class);
     }
 
     public static boolean hasAuthority(String authority) {
