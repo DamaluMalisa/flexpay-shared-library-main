@@ -8,7 +8,6 @@ com/flex/payment/shared/security/TokenUtils.class
 com/flex/payment/shared/util/PDFExporter.class
 com/flex/payment/shared/model/BaseModel.class
 com/flex/payment/shared/service/ExtendedService$FeignClient.class
-com/flex/payment/shared/dto/RoleDTO$1.class
 com/flex/payment/shared/exception/NotFoundException.class
 com/flex/payment/shared/dto/UserDTO.class
 com/flex/payment/shared/service/ExtendedService$Setter.class
@@ -32,7 +31,6 @@ com/flex/payment/shared/config/FeignConfig.class
 com/flex/payment/shared/util/PDFExporter$CellContentGetter.class
 com/flex/payment/shared/dto/RoleDTO.class
 com/flex/payment/shared/config/JpaAuditingConfig.class
-com/flex/payment/shared/dto/UserDetailsDTO$1.class
 com/flex/payment/shared/dto/RoleDTO$RoleDTOBuilder.class
 com/flex/payment/shared/controller/ApiError.class
 com/flex/payment/shared/controller/BaseController.class
